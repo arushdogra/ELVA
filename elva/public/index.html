@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f7f3">
+<title>ELVA — Personal assistant</title>
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="mark" aria-hidden="true">✦</span> ELVA</div><button id="reset" class="secondary">＋ New chat</button></header>
+<main class="layout">
+<section class="chat" aria-label="Chat">
+<div class="messages" id="messages" role="log" aria-live="polite">
+<div id="welcome">
+<div class="hero-mark" aria-hidden="true">✦</div>
+<h1>What’s on your mind?</h1>
+<p>Ask a question, catch up on the news, or get something done.</p>
+<div class="prompts">
+<button data-prompt="Find one AI news story from today in India and save a short summary with the source."><span aria-hidden="true">↗</span><strong>Catch up on AI news</strong><small>Find and save a story</small></button>
+<button data-prompt="What’s the weather in Chandigarh tomorrow?"><span aria-hidden="true">☀</span><strong>Check the weather</strong><small>Tomorrow in Chandigarh</small></button>
+<button data-prompt="I have eggs, bread and onions. Give me a quick dinner idea."><span aria-hidden="true">✳</span><strong>Find a dinner idea</strong><small>Use what I have at home</small></button>
+</div>
+</div>
+</div>
+<p id="status" role="status"></p>
+<form id="composer">
+<label class="sr-only" for="prompt">Message ELVA</label>
+<textarea id="prompt" placeholder="Message ELVA…" rows="1" maxlength="6000" required></textarea>
+<button id="mic" type="button" class="secondary" hidden>Mic</button>
+<button id="send" type="submit" aria-label="Send message">↑</button>
+</form>
+</section>
+<aside class="workspace">
+<h2>Workspace</h2>
+<p>Notes, tasks, and drafts saved on this device.</p>
+<div id="items"></div>
+<div class="activity"><h2>Activity</h2><ul id="activity"><li>Tool activity appears here.</li></ul></div>
+</aside>
+</main>
+</body>
+</html>

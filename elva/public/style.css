@@ -1,0 +1,46 @@
+:root{font-family:Inter,system-ui,sans-serif;color:#19281f;background:#f6f7f3;line-height:1.5;--line:#dde4dc;--muted:#536359;--accent:#235c42}
+*{box-sizing:border-box}
+body{margin:0}
+button,textarea{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:wait;opacity:.55}
+:focus-visible{outline:2px solid #377a59;outline-offset:3px}
+.top{height:75px;padding:0 max(5vw,20px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff}
+.brand{display:flex;gap:12px;align-items:center;font-size:19px;font-weight:800;letter-spacing:.17em}
+.mark,.hero-mark{display:grid;place-items:center;background:var(--accent);color:#fff;border-radius:12px;letter-spacing:0;width:36px;height:36px}
+.secondary{border:1px solid var(--line);background:#fff;border-radius:10px;color:var(--accent);font-weight:650;padding:7px 12px}
+.layout{max-width:1340px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;padding:28px max(4vw,18px)}
+.chat,.workspace{border:1px solid var(--line);border-radius:20px;background:#fff;min-width:0}
+.chat{display:flex;flex-direction:column;min-height:580px;height:calc(100dvh - 132px)}
+.messages{flex:1;min-height:0;overflow:auto;padding:24px clamp(16px,4vw,52px)}
+#welcome{max-width:640px;margin:clamp(35px,12vh,115px) auto 20px;text-align:center}
+.hero-mark{margin:0 auto 18px;background:#e6f1e9;color:var(--accent);width:56px;height:56px;font-size:30px;border-radius:18px}
+h1{font-size:clamp(28px,4vw,47px);line-height:1.1;letter-spacing:-.055em;margin:0}
+p{color:var(--muted)}
+.prompts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
+.prompts button{text-align:left;border:1px solid var(--line);background:#f9fbf8;color:inherit;border-radius:13px;padding:12px}
+.prompts button:hover,.secondary:hover{background:#edf5ee}
+.prompts span,.prompts small,.prompts strong{display:block}
+.prompts span{color:var(--accent);margin-bottom:7px;font-size:19px}
+.prompts small{color:var(--muted);margin-top:4px}
+#composer{margin:0 20px 20px;padding:8px;display:flex;align-items:center;gap:8px;border:1px solid #ccd9cf;border-radius:15px}
+textarea{flex:1;min-width:0;padding:9px;border:0;background:transparent;color:inherit;resize:vertical;max-height:150px}
+#send{background:var(--accent);border:0;color:white;border-radius:10px;width:40px;height:40px;font-size:23px}
+#status{margin:4px 24px 8px;font-size:13px}
+#status:empty{display:none}
+.workspace{align-self:start;padding:23px;overflow-wrap:anywhere}
+h2{font-size:16px;margin:0}
+.workspace p,.workspace li{font-size:13px}
+.activity{border-top:1px solid var(--line);margin-top:24px;padding-top:18px}
+.activity ul{margin-bottom:0;padding-left:19px;color:var(--muted)}
+.message{margin:0 0 18px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;overflow-wrap:anywhere}
+.message.user{margin-left:auto;background:#eaf4ec;width:fit-content;max-width:88%}
+.message p,.item p{margin:4px 0;color:inherit;white-space:pre-wrap}
+.message a{display:block;color:var(--accent);font-size:13px}
+.message button,.item button{margin-top:8px;font-size:12px}
+.item{padding:12px 0;border-bottom:1px solid var(--line)}
+.item small{display:block;color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:760px){.layout{grid-template-columns:1fr;padding-top:15px;gap:14px}.chat{height:72dvh;min-height:480px}.top{height:60px}.prompts{grid-template-columns:1fr;margin-top:20px}.prompts span,.prompts small{display:none}#welcome{margin-top:27px}}
+
+.item a{display:block;color:var(--accent);font-size:13px;margin-top:4px}

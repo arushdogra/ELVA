@@ -1,0 +1,1 @@
+{"name":"elva","version":"1.0.0","private":true,"type":"module","engines":{"node":"24.x"},"scripts":{"dev":"node --env-file-if-exists=.env.local server.js","build":"node --check api/chat.js && node --check public/app.js && node --check server.js"}}
